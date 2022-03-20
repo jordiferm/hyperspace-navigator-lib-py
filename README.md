@@ -1,4 +1,10 @@
-# cmake_example for pybind11
+# Hyperspace Navigator lib Python Wrapper
+
+Python library for N dimensional space pilots only.
+Wrapping [the C++ library](https://github.com/jordiferm/hyperspace-navigator-lib-cpp)
+
+![hyperspace-navigator-logo](https://github.com/jordiferm/hyperspace-navigator-lib-cpp/blob/5a5dcf4433649cf5390f9d42ec7f439e52abf1ca/assets/logo.png)
+
 
 [![Gitter][gitter-badge]][gitter-link]
 
