@@ -2,9 +2,7 @@ cmake_minimum_required(VERSION 3.4...3.18)
 project(cmake_example)
 
 add_subdirectory(pybind11)
-#include_directories(lib-cpp/include)
-# TODO: Remove this
-include_directories(/Users/jordif/desenvol/personal/disney/hyperspace-navigator-lib-cpp/include)
+include_directories(lib-cpp/include)
 pybind11_add_module(cmake_example src/main.cpp)
 
 # EXAMPLE_VERSION_INFO is defined by setup.py and passed into the C++ code as a
