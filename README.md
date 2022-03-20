@@ -27,16 +27,10 @@ Wrapping [the C++ library](https://github.com/jordiferm/hyperspace-navigator-lib
 [appveyor-link]:           https://ci.appveyor.com/project/dean0x7d/cmake-example/branch/master
 [appveyor-badge]:          https://ci.appveyor.com/api/projects/status/57nnxfm4subeug43/branch/master?svg=true
 
-An example [pybind11](https://github.com/pybind/pybind11) module built with a
+This is a Python Wrapper of the famous Hyperspace Navigator.
+It uses [pybind11](https://github.com/pybind/pybind11) module built with a
 CMake-based build system. This is useful for C++ codebases that have an
 existing CMake project structure. This is in many cases superseded by
-[`scikit_build_example`](https://github.com/pybind/scikit_build_example), which uses
-[scikit-build][], a tool from the makers of CMake designed to allow Python
-packages to be driven from CMake. However, there are still cases where you
-might want full control over the CMake run; and both of these approaches have
-some trade-offs not present in a pure setuptools build (see
-[`python_example`](https://github.com/pybind/python_example)). Python 3.6+ required;
-see the commit history for older versions of Python.
 
 ## Prerequisites
 
@@ -48,11 +42,11 @@ see the commit history for older versions of Python.
 ## Installation
 
 Just clone this repository and pip install. Note the `--recursive` option which is
-needed for the pybind11 submodule:
+needed for the pybind11 and the **hyperspace_navigator_lib_cpp** submodule:
 
 ```bash
-git clone --recursive https://github.com/pybind/cmake_example.git
-pip install ./cmake_example
+git clone --recursive https://github.com/jordiferm/hyperspace-navigator-lib-py
+pip install ./hyperspace_navigator_lib_py
 ```
 
 With the `setup.py` file included in this example, the `pip install` command will
@@ -68,7 +62,7 @@ the extension module to generate beautiful documentation in a variety formats.
 The following command generates HTML-based reference documentation; for other
 formats please refer to the Sphinx manual:
 
- - `cd cmake_example/docs`
+ - `cd docs`
  - `make html`
 
 
@@ -82,8 +76,14 @@ terms and conditions of this license.
 ## Test call
 
 ```python
-import cmake_example
-cmake_example.add(1, 2)
+import hyperspace_navigator as m
+my_space = [0, 1, 3,
+            5, 2, 8,
+            1, 5, 6]
+
+space_layout = [3,3]
+navigation_path = m.fastestRoute(my_space, space_layout)
+
 ```
 
 [`cibuildwheel`]:          https://cibuildwheel.readthedocs.io
