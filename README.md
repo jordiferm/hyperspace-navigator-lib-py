@@ -56,15 +56,18 @@ invoke CMake and build the pybind11 module as specified in `CMakeLists.txt`.
 
 ## Building the documentation
 
-Documentation for the example project is generated using Sphinx. Sphinx has the
+Documentation for the project is generated using Sphinx. Sphinx has the
 ability to automatically inspect the signatures and documentation strings in
 the extension module to generate beautiful documentation in a variety formats.
 The following command generates HTML-based reference documentation; for other
 formats please refer to the Sphinx manual:
 
- - `cd docs`
- - `make html`
+```bash
+pip install sphinx 
 
+cd docs 
+make html
+```
 
 ## License
 

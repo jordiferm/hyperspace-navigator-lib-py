@@ -25,7 +25,7 @@ namespace py = pybind11;
 
 PYBIND11_MODULE(hyperspace_navigator, m) {
     m.doc() = R"pbdoc(
-        Pybind11 example plugin
+        Hyperspace Navigator Python Wrapper
         -----------------------
 
         .. currentmodule:: hyperspace_navigator
@@ -33,8 +33,8 @@ PYBIND11_MODULE(hyperspace_navigator, m) {
         .. autosummary::
            :toctree: _generate
 
-           add
-           subtract
+           fastestRoute
+           routeTime
     )pbdoc";
 
     m.def("fastestRoute", &hyperspace_navigator::fastestRoute, R"pbdoc(

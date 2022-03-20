@@ -1,0 +1,1 @@
+.. automodule:: hyperspace_navigator

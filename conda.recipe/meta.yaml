@@ -27,7 +27,7 @@ test:
   requires:
     - pytest
   imports:
-    - cmake_example
+    - hyperspace_navigator
   source_files:
     - tests
   commands:
