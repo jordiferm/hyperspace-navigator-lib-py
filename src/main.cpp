@@ -23,12 +23,12 @@ float routeTime(std::vector<float> space, std::vector<std::vector<uint64_t>> ind
 
 namespace py = pybind11;
 
-PYBIND11_MODULE(cmake_example, m) {
+PYBIND11_MODULE(hyperspace_navigator, m) {
     m.doc() = R"pbdoc(
         Pybind11 example plugin
         -----------------------
 
-        .. currentmodule:: cmake_example
+        .. currentmodule:: hyperspace_navigator
 
         .. autosummary::
            :toctree: _generate

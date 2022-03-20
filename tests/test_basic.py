@@ -1,4 +1,4 @@
-import cmake_example as m
+import hyperspace_navigator as m
 import pytest
 
 
