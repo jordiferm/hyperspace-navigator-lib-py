@@ -7,14 +7,14 @@
 //TODO, Custom type casters for Map and Navigator, see: https://pybind11.readthedocs.io/en/stable/advanced/cast/custom.html
 namespace hyperspace_navigator {
 
-std::vector<std::vector<uint64_t>> fastestRoute(std::vector<float> space) {
-    SpaceMap map = SpaceMap(space.data(), SpaceLayout({3, 3}));
+std::vector<std::vector<uint64_t>> fastestRoute(std::vector<float> space, const std::vector<uint64_t> space_layout) {
+    SpaceMap map = SpaceMap(space.data(), SpaceLayout(space_layout));
     NavigationPath navigationPath = map.fastestRoute(map.spaceStart(), map.spaceEnd());
     return navigationPath.indexes();
 }
 
-float routeTime(std::vector<float> space, std::vector<std::vector<uint64_t>> indexes) {
-    SpaceMap map = SpaceMap(space.data(), SpaceLayout({3, 3}));
+float routeTime(std::vector<float> space, std::vector<std::vector<uint64_t>> indexes, const std::vector<uint64_t> space_layout) {
+    SpaceMap map = SpaceMap(space.data(), SpaceLayout(space_layout));
     NavigationPath path = map.navigationPath(indexes);
     return map.time(path);
 }
